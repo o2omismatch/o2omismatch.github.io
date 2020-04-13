@@ -1,0 +1,119 @@
+body {
+    background-color: black;
+}
+
+.header {
+    position: fixed;
+    top: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    left: 5%;
+}
+
+.navi {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #A9A9A9;
+    position: fixed;
+    top: 5%;
+}
+
+#map {
+    position: fixed;
+    top: 5%;
+    left: 76%;
+}
+
+#methods {
+    position: fixed;
+    left: 82%;
+}
+
+#about {
+    position: fixed;
+    left: 90%;
+    color: white;
+}
+
+.content {
+    font-family: "Montserrat", sans-serif;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    /* align-content: center; */
+}
+
+.content_advisor {
+    font-family: "Montserrat", sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    width: 60%;
+    /* align-content: center; */
+}
+
+h1 {
+
+    font-weight: 700;
+    font-size: 36px;
+    color: white;
+    position: relative;
+    text-align: center;
+    /* left: 40%; */
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    top: 50%;
+    /* align-content: center; */
+    /* width: 200px; */
+    /* align-items: center; */
+}
+
+#name1 {
+    float: left;
+    width: 33.33333%;
+    text-align: left;
+
+}
+
+#name2 {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+#name3 {
+    float: left;
+    width: 33.33333%;
+    text-align: right;
+}
+
+#name_advisor {
+    position: relative;
+    top: 50%;
+    text-align: center;
+}

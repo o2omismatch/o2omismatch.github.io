@@ -1,0 +1,69 @@
+body {
+    background-color: black;
+}
+
+.header {
+    position: fixed;
+    top: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    left: 5%;
+}
+
+.navi {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #A9A9A9;
+    position: fixed;
+    top: 5%;
+}
+
+#map {
+    position: fixed;
+    top: 5%;
+    left: 76%;
+
+}
+
+#methods {
+    position: fixed;
+    left: 82%;
+    color: white;
+}
+
+#about {
+    position: fixed;
+    left: 90%;
+}
+
+.content {
+    font-family: "Montserrat", sans-serif;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+}
+
+h1 {
+
+    font-weight: 700;
+    font-size: 36px;
+    color: white;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    line-height: 1.8;
+}

@@ -1,0 +1,74 @@
+
+
+body {
+    background-color: black;
+}
+
+h1  {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    /* font-weight: Black; */
+    font-size: 64px;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    color: white;
+    position: relative;
+    top: 0%;
+    line-height: 1.3;
+}
+
+p   {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.8;
+
+    position: relative;
+    color: white;
+
+    top: 0px;
+    /* height: 70px; */
+    width: 600px;
+}
+
+#map_text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+
+    color: white;
+
+    position: relative;
+}
+
+#playBtn {
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+    top: 60%;
+}
+
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    /* bottom: 0; */
+    top: 15%;
+    left: 10%;
+    /* height: 80%; */
+    width: 100%;
+    padding: 20px;
+}
+
+.supsub {position: absolute; font-size: 32px;}
+.subscript {display:block; position:relative; left:5px; top: 10px}
+.superscript {display:block; position:relative; left:5px; top: 5px}

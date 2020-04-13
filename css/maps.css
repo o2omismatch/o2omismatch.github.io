@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+
+.header {
+    position: fixed;
+    top: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    left: 5%;
+}
+
+.navi {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #A9A9A9;
+    position: fixed;
+    top: 5%;
+}
+
+#map {
+    position: fixed;
+    top: 5%;
+    left: 76%;
+    color: white;
+}
+
+#methods {
+    position: fixed;
+    left: 82%;
+}
+
+#about {
+    position: fixed;
+    left: 90%;
+}
+
+.map_iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
