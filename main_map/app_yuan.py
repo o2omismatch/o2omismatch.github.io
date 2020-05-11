@@ -32,30 +32,7 @@ mapbox_access_token = "pk.eyJ1IjoiYnJvb2tlZnp5IiwiYSI6ImNqdWFtZHNmdTA0N3o0M21oZG
 #     "United Nations HQ": {"lat": 40.7489, "lon": -73.9680},
 # }
 
-# Initialize data frame
-# df1 = pd.read_csv(
-#     "https://raw.githubusercontent.com/plotly/datasets/master/uber-rides-data1.csv",
-#     dtype=object,
-# )
-# df2 = pd.read_csv(
-#     "https://raw.githubusercontent.com/plotly/datasets/master/uber-rides-data2.csv",
-#     dtype=object,
-# )
-# df3 = pd.read_csv(
-#     "https://raw.githubusercontent.com/plotly/datasets/master/uber-rides-data3.csv",
-#     dtype=object,
-# )
-# df = pd.concat([df1, df2, df3], axis=0)
-# df["Date/Time"] = pd.to_datetime(df["Date/Time"], format="%Y-%m-%d %H:%M")
-# df.index = df["Date/Time"]
-# df.drop("Date/Time", 1, inplace=True)
-# totalList = []
-# for month in df.groupby(df.index.month):
-#     dailyList = []
-#     for day in month[1].groupby(month[1].index.day):
-#         dailyList.append(day[1])
-#     totalList.append(dailyList)
-# totalList = np.array(totalList)
+
 
 ##### Mismatch Data
 # df_geo = gpd.read_file('assets/street_mismatch_extract.geojson')
