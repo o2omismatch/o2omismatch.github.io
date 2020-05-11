@@ -70,7 +70,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 40%;
   }
 #map {
     position: fixed;
@@ -109,8 +109,8 @@ img {
 .heading{
     font-family: "Montserrat", sans-serif;
     position: relative;
-    top: 100px;
-    left: 10%;
+    top: 5%;
+    left: 5%;
 }
 h1 {
     display: block;
@@ -142,21 +142,25 @@ p {
 
 ol {
     display: block;
+    weight: 80%;
     list-style-type: decimal;
     margin-block-start: 10em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    line-height: 500%;
 }
 
 .section-content {
+    margin-top: 0;
     margin-left: 0;
-    width: 100%;
+    width: 80%;
     padding: 30px 30px;
 }
 .section-content {
     font-family: "Montserrat", sans-serif;
+
     position: relative;
     top: 100px;
     left: 10%;
@@ -203,5 +207,3 @@ ol {
     color: #ffd447;
     text-decoration: none;
 }
-
-
