@@ -56,9 +56,13 @@
                     </li> 
 
                     <li><h2>Estimate the Mismatch</h2>
-                        <p> To test how much does online reviews actually contribute to physical acitivites, we include other
-                            variables in the model.</p> 
-                            <img class="figure" src="../assets/img/pop-up-3.png" width="150%"> 
+                        <p> This model was able to achieve around 40% R-square, sigh... Then it means there are a lot 
+                            of variance could not be explained even after we control the neighborhood variables! Therefore,
+                            use this model's residual, we define a O2O mismatch index, which is the residual from the OLS model
+                            regressing the total street level visit on online reviews (including the number of reviews and the stars)
+                            conditioning on other factors.
+                        </p> 
+                            <img class="figure" src="../assets/img/pop-up-3.png" width="2000"> 
                             
             
 
