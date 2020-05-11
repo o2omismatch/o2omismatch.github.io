@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Map-O2O NYC</title>
+        <title>Map-O2O Mismatch</title>
         <link rel="stylesheet" href="../css/methods.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <style>
@@ -13,7 +13,7 @@
         <div class="as-app">
         <div class="header">
             <a class="logo" href="../index.html">
-                O2O NYC
+                O2O Mismatch
             </a>
             <a href="maps.html" class="navi" id="map">Map</a>
             <a href="methods.html" class="navi" id="methods">Methods</a>
@@ -28,86 +28,86 @@
                     <div class="separator">
                     </div>
                 </div>
-                <ol> 
-                    <li> 
+                <ol>
+                    <li>
                         <h2>Observations</h2>
                         <p>"As one of many yelp users, searching food online is part of my exploratory life." However,
                             does popular stores among yelp reviewers really contribute to the livelyhood of physical space?
                             <br>
-                            Inspired by this question, we download review data from 1,500+ stores in Manhattan from yelp, 
+                            Inspired by this question, we download review data from 1,500+ stores in Manhattan from yelp,
                             and aggregate these reviews by physical streets. Then we compare the aggregated online popularity
                             with the number of actual visits along these streets, here is what we found:
                             <iframe width="850" height="700" frameborder="0" scrolling= "no" src="bubble.html"> </iframe>
-                        </p> 
+                        </p>
 
                     <li><h2>Model Construction</h2>
                         <p> To test how much does online reviews actually contribute to physical acitivites, we include other
-                            variables in the model.</p> 
-                            <p>  * <strong>Physical Characteristics: </strong>Does Beautiful Space Matters?</p> 
-                            <p>  * <strong>Business Diversity and Transit: </strong>Is Jane Jacobs still right?</p> 
-                            <p>  * <strong>Local Business: </strong>How are local businesses doing?</p> 
-                            <p>  * <strong>X: </strong>We control other variables.</p> 
-                            
+                            variables in the model.</p>
+                            <p>  * <strong>Physical Characteristics: </strong>Does Beautiful Space Matters?</p>
+                            <p>  * <strong>Business Diversity and Transit: </strong>Is Jane Jacobs still right?</p>
+                            <p>  * <strong>Local Business: </strong>How are local businesses doing?</p>
+                            <p>  * <strong>X: </strong>We control other variables.</p>
+
                             <iframe width="850" height="700" frameborder="0" scrolling= "no" src="coefficients.html"> </iframe>
-                            
+
 
                         </li>
-                        
-                    </li> 
+
+                    </li>
 
                     <li><h2>Estimate the Mismatch</h2>
-                        <p> This model was able to achieve around 40% R-square, sigh... Then it means there are a lot 
+                        <p> This model was able to achieve around 40% R-square, sigh... Then it means there are a lot
                             of variance could not be explained even after we control the neighborhood variables! Therefore,
                             use this model's residual, we define a O2O mismatch index, which is the residual from the OLS model
                             regressing the total street level visit on online reviews (including the number of reviews and the stars)
                             conditioning on other factors.
-                        </p> 
-                            <img class="figure" src="../assets/img/pop-up-3.png" width="2000"> 
-                            
-            
+                        </p>
+                            <img class="figure" src="../assets/img/pop-up-3.png" width="2000">
+
+
 
                         </li>
-                        
+
                     </li>
-                    <li> 
+                    <li>
                         <h2>Data</h2>
-                        <p>We collect the SafeGraph pattern data* via the SafeGraph COVID-19 Data Consortium 
-                            and then extract the data from October to December 2019 for our analysis. 
-                            
+                        <p>We collect the SafeGraph pattern data* via the SafeGraph COVID-19 Data Consortium
+                            and then extract the data from October to December 2019 for our analysis.
+
                             Our review data are downloaded from Yelp. We use most recent listings in Manhattan
                             areas to estimate the online popularity.
 
-                        </p> 
-                    </li> 
-                    <li> 
+                        </p>
+                    </li>
+                    <li>
                         <h2>Estimating Street-level Online Popularity and offline Popularity</h2>
-                        
-                        <p>All the POI visit data in Manhattan is aggregated towards the nearest street 
-                            segments using an R-tree algorithm to calculate the total visits of street segments 
-                            in this 3-month time period. Similarly, the total visits by sectors are calculated 
+
+                        <p>All the POI visit data in Manhattan is aggregated towards the nearest street
+                            segments using an R-tree algorithm to calculate the total visits of street segments
+                            in this 3-month time period. Similarly, the total visits by sectors are calculated
                             following the same manner for street segments.</p>
-                          
+
                         <figure>
-                        <img class="figure" src="../assets/img/pop-up-1.png" width="30%" > 
+                        <img class="figure" src="../assets/img/pop-up-1.png" width="30%" >
                         </figure>
                         <p>Using Yelp review data, we aggregate the number of reviews,
                             average stars of each individual business at street segment level.</p>
-                        <img class="figure" src="../assets/img/pop-up-2.png" width="100%"> 
+                        <img class="figure" src="../assets/img/pop-up-2.png" width="100%">
                     </li>
-                    <li> 
+                    <li>
                         <h2>Physical Environment Beauty Index</h2>
                         <p>We use Google Street View images downloaded from 2017 dataset to extract built environment values.
                             This work used a deep learning model created by <a href="https://doi.org/10.1016/j.landurbplan.2018.08.020">Fan (2018)</a>
                             With the model and 6,708 street view images in Manhattan, we predict the beauty index of each images, and then aggregate
                             the beauty score by each street segment. The beauty score was normalized.
                         </p>
-                        
-                    </li> 
-                    <li> 
+
+                    </li>
+                    <li>
                         <h2>Estimate the O2O Mismatch</h2>
                         <p>To measure online-offline mismatch,
                         </p>
-                        <img class="figure" src="../assets/img/pop-up-3.png" width="100%"> 
+                        <img class="figure" src="../assets/img/pop-up-3.png" width="100%">
                         <p> To measure the inequality of a place, we use a
                             city-wide normalized measure. Because income
                             groups correspond to exactly 25% of the users in
@@ -121,16 +121,16 @@
                             coming from a single income group. Mathematically,
                             we calculate the absolute deviation of a place's
                             income distribution from that flat ideal:
-                        
-                    </li> 
-                    <li> 
+
+                    </li>
+                    <li>
                         <h2>Limitations</h2>
                         <p>
                         </p>
                         <p>
-                        
+
                         </p>
-                    </li> 
+                    </li>
                 </ol>
             </div>
             </div>
@@ -150,13 +150,13 @@
                     <h2>Estimating how many people visit a place</h2>
                     <iframe width="600" height="600" frameborder="0" scrolling= "no" src="coefficients.html"> </iframe>
                 </li>
-                
+
                 <li>
                     <h2>Estimating how many people review a place</h2>
-                    
+
                 </li>
 
-                
+
             </ol>
         </div> -->
 

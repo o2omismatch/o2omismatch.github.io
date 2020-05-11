@@ -42,7 +42,7 @@ body {
 
 .header {
     position: fixed;
-    top: 5%;
+    top: 3%;
     color: white;
     text-decoration: none;
 }
@@ -64,7 +64,7 @@ body {
     text-decoration: none;
     color: #A9A9A9;
     position: fixed;
-    top: 5%;
+    top: 3%;
 }
 img {
     display: block;
@@ -74,7 +74,7 @@ img {
   }
 #map {
     position: fixed;
-    top: 5%;
+    /* top: 5%; */
     left: 76%;
 
 }
