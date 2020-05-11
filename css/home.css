@@ -37,19 +37,19 @@ p   {
 #map_text {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
 
     color: white;
 
     position: relative;
 }
 
-#playBtn {
+/* #playBtn {
     position: relative;
     font-size: 18px;
     cursor: pointer;
     top: 60%;
-}
+} */
 
 #bgVideo {
     position: fixed;

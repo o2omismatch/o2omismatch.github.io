@@ -1,10 +1,11 @@
-body {
+html, body {
     background-color: #042762;
+    height: 100%;
 }
 
 .header {
     position: fixed;
-    top: 5%;
+    top: 3%;
     color: white;
     text-decoration: none;
 }
@@ -26,12 +27,12 @@ body {
     text-decoration: none;
     color: #A9A9A9;
     position: fixed;
-    top: 5%;
+    top: 3%;
 }
 
 #map {
     position: fixed;
-    top: 5%;
+    /* top: 5%; */
     left: 76%;
 }
 

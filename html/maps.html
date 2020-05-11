@@ -12,54 +12,55 @@
         <div id="map_modal" class="modal" >
             <div class="modal-content content1" id="map_modal1">
                 <h2>Online reviews:</h2>
-                <p id="modal_p">The O2O Mismatch shows streets with places that people reviewed and stared on yelp the most. We are particularly interested in places such as retails, restaurant, hotel, arts and recreation businesses.
-    (In February, we downloaded yelp review data for all business documents on Reference USA and selected only the retail, restaurant, hotel and arts and recreation sectors in our study.)
-                </p>
                 <img src="../assets/img/pop-up-2.png" height="220" class="popup_img">
-                <!-- <button type="button" id="popup_btn1_left" class="popup_btn btn_left">Back</button> -->
-                <button type="button" id="popup_btn1" class="popup_btn">Next</button>
+                <p id="modal_p">The O2O Mismatch shows streets with places that people reviewed and stared on yelp the most. We are particularly interested in places such as retails, restaurant, hotel, arts and recreation businesses. (In February, we downloaded yelp review data for all business documents on Reference USA and selected only the retail, restaurant, hotel and arts and recreation sectors in our study.)
+                </p>
+                <div id="outer">
+                    <!-- <button type="button" id="popup_btn1_left" class="popup_btn btn_left">Back</button> -->
+                    <button type="button" id="popup_btn1" class="popup_btn">Next</button>
+                </div>
+
             </div>
 
             <div class="modal-content content2" id="map_modal2">
                 <h2>offline visits:</h2>
+                <img src="../assets/img/pop-up-1.png" class="popup_img img2">
                 <p id="modal_p">
                     In the physical world, each place also varies with the amount of visitors they attract everyday. As a consequence, each street will present different volumes of visitors
                 </p>
-                <img src="../assets/img/pop-up-1.png" class="popup_img">
-
-                <!-- <button type="button" id="popup_btn2_left" class="popup_btn btn_left">Back</button> -->
-                <button type="button" id="popup_btn2" class="popup_btn">Next</button>
+                <div id="outer">
+                    <button type="button" id="popup_btn2_left" class="popup_btn btn_left">Back</button>
+                    <button type="button" id="popup_btn2" class="popup_btn">Next</button>
+                </div>
 
 
             </div>
 
             <div class="modal-content content3" id="map_modal3">
                 <h2>O2O Mismatch:</h2>
+                <img src="../assets/img/pop-up-3.png" height="200" class="popup_img">
                 <p id="modal_p">
                     Our mismatch index measures how different the number of offline visits and the volumes of online reviews are. Our hypothesis is that more online reviews will introduce more offline visits, and vice versa. However, there are places that are under-represented by online reviewers on Yelp, and also places that are popular online but do not contribute to the physical world activities. Click a street to see the mismatch metric and how much a street being favored offline vs. reviewed online.
                 </p>
-                <img src="../assets/img/pop-up-3.png" height="200" class="popup_img">
-                <!-- <button type="button" id="popup_btn3_left" class="popup_btn btn_left">Back</button> -->
-                <button type="button" id="popup_btn3" class="popup_btn">Dismiss</button>
+                <div id="outer">
+                    <button type="button" id="popup_btn3_left" class="popup_btn btn_left">Back</button>
+                    <button type="button" id="popup_btn3" class="popup_btn">Map</button>
+                </div>
             </div>
         </div>
 
-
-
-        <iframe src="https://api.mapbox.com/styles/v1/brookefzy/cka1yguhe01of1jqharhr7bei.html?fresh=true&title=view&access_token=pk.eyJ1IjoiYnJvb2tlZnp5IiwiYSI6ImNqdWFtZHNmdTA0N3o0M21oZG9peDU2NXMifQ.fbFnwmA72jGPO8IHcfEeRA" class="map_iframe"></iframe>
-
-        <!-- <div class="control_panel">
-
-        </div> -->
-
         <div class="header">
             <a class="logo" href="../index.html">
-                O2O NYC
+                O2O Mismatch
             </a>
             <a href="maps.html" class="navi" id="map">Map</a>
             <a href="methods.html" class="navi" id="methods">Methods</a>
             <a href="about.html" class="navi" id="about">About</a>
         </div>
         <script src="../javascript/map.js"></script>
+
+
+        <iframe src="https://api.mapbox.com/styles/v1/brookefzy/cka1yguhe01of1jqharhr7bei.html?fresh=true&title=view&access_token=pk.eyJ1IjoiYnJvb2tlZnp5IiwiYSI6ImNqdWFtZHNmdTA0N3o0M21oZG9peDU2NXMifQ.fbFnwmA72jGPO8IHcfEeRA" class="map_iframe"></iframe>
+
     </body>
 </html>
