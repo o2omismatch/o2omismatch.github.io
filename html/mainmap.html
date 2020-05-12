@@ -4,7 +4,7 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    
+
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../css/maps_main.css">
@@ -16,7 +16,7 @@
     />
 
     <style>
-    
+
     </style>
 
   </head>
@@ -37,7 +37,7 @@
             <section class="as-box" id="search-container">
                 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
 
-            
+
             </section>
             <section class="as-box" id="legend">
                 <!-- legend -->
@@ -92,12 +92,12 @@
       style: 'mapbox://styles/brookefzy/cka1yguhe01of1jqharhr7bei' // replace this with your style URL
     });
 
-    
+
 // helperfunctions//
 function percentNumber(num) {
     num=num*100
     return num.toFixed(2)+'%'
-  
+
 }
 
 function percentNumvisit(num) {
@@ -124,7 +124,7 @@ function svgbar2(num){
     }else{
         width =(num)/13.4*120
     }
-    
+
     return '<svg width="120px" height="10px"><rect x="2" y="1" width="'+width+'" height="10" style="fill:#00939c;"/></svg>'
 }
 
@@ -148,13 +148,13 @@ function svgbar2(num){
           .addTo(map);
           });
 
-          
-          
+
+
           // Change the cursor to a pointer when the mouse is over the states layer.
           map.on('mouseenter', 'Mismatch Index', function() {
           map.getCanvas().style.cursor = 'pointer';
           });
-          
+
           // Change it back to a pointer when it leaves.
           map.on('mouseleave', 'Mismatch Index', function() {
           map.getCanvas().style.cursor = '';
@@ -180,7 +180,7 @@ function svgbar2(num){
                 map.setStyle('mapbox://styles/brookefzy/cka34gg5f024q1ipfokjck4u2');
 
             }else if(layerId=="online"){
-    
+
                 map.setStyle('mapbox://styles/brookefzy/cka34ksar02bw1iqqwwofy3os')
             }else if (layerId=="mismatch"){
                 map.setStyle('mapbox://styles/brookefzy/cka1yguhe01of1jqharhr7bei');
@@ -195,7 +195,7 @@ function svgbar2(num){
             // for (var i = 0; i < inputs.length; i++) {
             // inputs[i].onclick = switchLayer;
             // console.log(layer.value)
-            
+
             // }
 
 

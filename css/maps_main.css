@@ -1,13 +1,16 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     background: #042762;
     color: #f8f8f8;
     font: 500 20px/26px 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-    margin: 10;
+    margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
   }
-  
-
 
   * {
     -webkit-box-sizing: border-box;
@@ -23,16 +26,16 @@ body {
     line-height: 20px;
     padding: 20px 2px;
   }
-  
+
   a {
     color: #404040;
     text-decoration: none;
   }
-  
+
   a:hover {
     color: #101010;
   }
-  
+
   .sidebar {
     position: absolute;
     width: 20%;
@@ -54,13 +57,13 @@ body {
     /* border-right: 1px solid rgba(0, 0, 0, 0.25); */
   }
 
-  
-  
+
+
   .pad2 {
     width: 250px;
     font-family: "Montserrat", sans-serif;
   }
-  
+
   .map {
     /* border-left: 1px solid #fff; */
     position: absolute;
@@ -79,13 +82,13 @@ body {
     padding: 10 10px;
   }
 
-  
+
 
 
 
   h2,
   h3 {
-      
+
     margin-left: 10px;
     margin-right:10px;
     font-size: 1.2em;
@@ -186,7 +189,7 @@ body {
     border-radius: 4px;
     background-color: #042762;
 
-    
+
 }
 .legend {
     transition: all .3s cubic-bezier(.4,.01,.165,.99);
@@ -195,7 +198,7 @@ body {
     pointer-events: all;
     font-family: "Montserrat", sans-serif;
     font-variant: small-caps;
-    
+
 }
 
 .labels-legend {
@@ -218,7 +221,7 @@ body {
 
 div {
     display: block;
-} 
+}
 
 
 /*************************** Atlas ***************************/
@@ -229,7 +232,7 @@ div {
     display: none;
 
   }
-  
+
   .mapboxgl-popup-content {
     /* font: 400 12px/22px "Montserrat", sans-serif; */
     padding: 0;
@@ -238,13 +241,13 @@ div {
     background: #042762;
 
   }
-  
+
   .mapboxgl-popup-content-wrapper {
     padding: 1%;
     background:#042762;
     color: #042762;
   }
-  
+
   .mapboxgl-popup-content h2 {
 
     display: block;
@@ -256,9 +259,9 @@ div {
 
     /* color: #fff; */
   }
-  
+
   .mapboxgl-popup-content h3 {
- 
+
     background:#042762;
     /* color: #042762; */
     margin: 10;
@@ -271,7 +274,7 @@ div {
     margin-top: 5;
 
   }
-  
+
   .mapboxgl-popup-content h4 {
     font-size: 27px;
     line-height: 32px;
@@ -287,21 +290,21 @@ div {
   }
 
 
-  
+
   .mapboxgl-popup-content div {
     /* padding: 10px; */
     background:#042762;
   }
-  
+
   .mapboxgl-container .leaflet-marker-icon {
     cursor: pointer;
   }
-  
+
   .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
     margin-top: 15px;
     background-color: #042762;
   }
-  
+
   .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
     border-bottom-color: #042762;
   }
@@ -415,8 +418,14 @@ select {
 
   section {
     display: block;
+<<<<<<< HEAD
     padding: 10px;
   }
 
 
 
+=======
+    --as-dropdown--color--main: #1785fb;
+    --as-dropdown--color--secondary: #d1d5d7;
+}
+>>>>>>> 04e2386568eae11d32dff8f0fe550a4bce3aa385
