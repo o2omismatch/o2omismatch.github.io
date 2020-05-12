@@ -176,15 +176,8 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
     top: 60px;
     left: 0px;
-=======
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
->>>>>>> 48060f220abcecfab1651579f69f4ad87e572aa6
 }
 
 .control_panel {
