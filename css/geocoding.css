@@ -1,0 +1,93 @@
+/* Basics */
+
+
+.mapboxgl-ctrl-geocoder {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  background-color: #042762;
+  width: 100%;
+  min-width: 240px;
+  z-index: 1;
+  border-radius: 4px;
+  transition: width .25s, min-width .25s;
+}
+
+
+
+/* Suggestions */
+.mapboxgl-ctrl-geocoder .suggestions {
+  background-color: #fff;
+  border-radius: 4px;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  top: 110%; /* fallback */
+  top: calc(100% + 6px);
+  z-index: 1000;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.mapboxgl-ctrl-bottom-left .suggestions,
+.mapboxgl-ctrl-bottom-right .suggestions {
+  top: auto;
+  bottom: 100%;
+}
+
+.mapboxgl-ctrl-geocoder .suggestions > li > a {
+  cursor: default;
+  display: block;
+  padding: 6px 12px;
+  color: #404040;
+}
+
+.mapboxgl-ctrl-geocoder .suggestions > .active > a,
+.mapboxgl-ctrl-geocoder .suggestions > li > a:hover {
+  color: #404040;
+  background-color: #f3f3f3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mapboxgl-ctrl-geocoder--suggestion-title {
+  font-weight: bold;
+}
+
+.mapboxgl-ctrl-geocoder--suggestion-title,
+.mapboxgl-ctrl-geocoder--suggestion-address {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Icons */
+.mapboxgl-ctrl-geocoder--icon {
+  display: inline-block;
+  vertical-align: middle;
+  speak: none;
+  fill: #757575;
+  top: 15px;
+}
+
+.mapboxgl-ctrl-geocoder--icon-search {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  width: 23px;
+  height: 23px;
+}
+
+.mapboxgl-ctrl-geocoder--button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  line-height: 1;
+}
+

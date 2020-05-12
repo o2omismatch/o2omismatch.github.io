@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../css/maps_main.css">
+    <!-- geocoding style -->
+        <link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+    type="text/css"
+    />
+
+    <style>
+    
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id='map' class='map pad2'></div>
+    <!-- <div  class='sidebar pad2'><h2>Mismatch Distribution</h2><div id='pd'><p>Click a Street</p></div></div> -->
+    <!-- <div  class='sidebar pad2'>
+        <h2>Mismatch Distribution</h2><div id='pd'><p>Click a Street</p></div></div> -->
+
+
+    <!-- legend -->
+    <div class="legend legend-panel js-legend hide-in-onboarding">
+        <div class="widgets-item legend-inner">
+            <h2 class="as-body as-font--medium legend-text">Mismatch Index</h2>
+            <div class="mismatch-legend as-mt--8"></div>
+            <div class="labels-legend as-mt--4">
+                <span class="as-caption">More Popular Offline</span>
+                <span class="as-caption">More Popular Online</span>
+            </div>
+        </div>
+    </div>
+ <!-- geocoding search and side bar -->
+
+    <aside class="as-sidebar as-sidebar--left collapse-in-onboarding" data-name="Controls">
+        <div class="as-container as-container--scrollable js-scroll">
+            <section data-help="B" class="as-box" id="search-container">
+                <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+
+            
+            </section>
+            <section class="as-box" id="title">
+                <h2>Mismatch Distribution</h2>
+            </section>
+
+                 <section data-help="C" class="as-box" >
+                <div class="as-dropdown">
+                <!-- <label>Select layer</label> -->
+                <select id="layer" name="layer">
+                <option value="mismatch">Mismatch Index</option>
+                <option value="offline">Offline Visit</option>
+                <option value="online">Online Visit</option>
+
+
+                </div>
+                </select>
+            </section>
+                </div>  
+            </div> 
+
+            
+            <!-- <section data-help="C" class="as-box">
+                <as-histogram-widget show-clear="" heading="Inequality distribution" class="hydrated"><as-widget-header no-data-message="NO DATA AVAILABLE" class="hydrated"><h2 class="as-widget-header__header">Inequality distribution</h2><p class="as-widget-header__subheader as-body"></p></as-widget-header><div class="as-histogram-widget__wrapper"><svg class="figure"><g class="y-axis" fill="none" font-size="10" font-family="sans-serif" text-anchor="end"><path class="domain" stroke="#000" d="M215,149.5H0.5V0.5H215"></path><g class="tick" opacity="1" transform="translate(0,149.5)"><line stroke="#000" x2="215"></line><text fill="#000" x="-10" dy="0.32em">0</text></g><g class="tick" opacity="1" transform="translate(0,124.66666666666667)"><line stroke="#000" x2="215"></line><text fill="#000" x="-10" dy="0.32em">200</text></g><g class="tick" opacity="1" transform="translate(0,99.83333333333334)"><line stroke="#000" x2="215"></line><text fill="#000" x="-10" dy="0.32em">400</text></g><g class="tick" opacity="1" transform="translate(0,75)"><line stroke="#000" x2="215"></line><text fill="#000" x="-10" dy="0.32em">600</text></g><g class="tick" opacity="1" transform="translate(0,50.16666666666667)"><line stroke="#000" x2="215"></line><text fill="#000" x="-10" dy="0.32em">800</text></g><g class="tick" opacity="1" transform="translate(0,25.33333333333333)"><line stroke="#000" x2="215"></line><text fill="#000" x="-10" dy="0.32em">1k</text></g><g class="tick" opacity="1" transform="translate(0,0.5)"><line stroke="#000" x2="215"></line><text fill="#000" x="-10" dy="0.32em">1.2k</text></g></g><g class="x-axis" transform="translate(0, 149)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="#000" d="M0.5,-149V0.5H215.5V-149"></path><g class="tick" opacity="1" transform="translate(0.5,0)"><line stroke="#000" y2="-149"></line><text fill="#000" y="10" dy="0.71em" transform="translate(2.78125)" opacity="1">0</text></g><g class="tick" opacity="1" transform="translate(108,0)"><line stroke="#000" y2="-149"></line><text fill="#000" y="10" dy="0.71em" transform="translate(0)" opacity="1">50</text></g><g class="tick" opacity="1" transform="translate(215.5,0)"><line stroke="#000" y2="-149"></line><text fill="#000" y="10" dy="0.71em" transform="translate(-8.34375)" opacity="1">100</text></g></g><g class="plot"><rect y="127.39500000000001" height="21.60499999999999" class="bar" x="0" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="57.364999999999995" height="91.635" class="bar" x="21.5" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="7.574166666666656" height="141.42583333333334" class="bar" x="43" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="21.853333333333325" height="127.14666666666668" class="bar" x="64.5" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="54.50916666666667" height="94.49083333333333" class="bar" x="86" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="82.44666666666667" height="66.55333333333333" class="bar" x="107.5" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="110.88083333333333" height="38.11916666666667" class="bar" x="129" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="127.7675" height="21.2325" class="bar" x="150.5" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="137.70083333333332" height="11.299166666666679" class="bar" x="172" width="20.5" style="fill: rgb(23, 133, 251);"></rect><rect y="146.14416666666668" height="2.8558333333333223" class="bar" x="193.5" width="20.5" style="fill: rgb(23, 133, 251);"></rect></g><g class="brush" fill="none" pointer-events="all" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="overlay" pointer-events="all" cursor="crosshair" x="0" y="0" width="215" height="156"></rect><rect class="selection" cursor="move" fill="#777" fill-opacity="0.3" stroke="#fff" shape-rendering="crispEdges" style="display: none;"></rect><rect class="handle handle--e" cursor="ew-resize" style="display: none;"></rect><rect class="handle handle--w" cursor="ew-resize" style="display: none;"></rect><line class="bottomline" stroke-width="4" pointer-events="none" y1="149" y2="149" style="opacity: 0;"></line><g class="handle--wrapper"><rect class="handle--custom" width="6" height="14" rx="2" ry="2"></rect><g class="handle--grab"><line x1="2" y1="0" x2="4" y2="0" class="grab-line"></line><line x1="2" y1="2" x2="4" y2="2" class="grab-line"></line><line x1="2" y1="4" x2="4" y2="4" class="grab-line"></line></g></g><g class="handle--wrapper"><rect class="handle--custom" width="6" height="14" rx="2" ry="2"></rect><g class="handle--grab"><line x1="2" y1="0" x2="4" y2="0" class="grab-line"></line><line x1="2" y1="2" x2="4" y2="2" class="grab-line"></line><line x1="2" y1="4" x2="4" y2="4" class="grab-line"></line></g></g></g></svg></div><div><button class="as-btn as-btn--primary as-btn--s as-histogram-widget__clear" disabled="">Clear selection</button></div></as-histogram-widget>
+            </section>
+            <section data-help="D" class="as-box">
+                <as-switch label="Color by category" class="hydrated"><div class="as-switch"><div class="as-switch__element"><input class="as-switch__input" role="switch" id="" type="checkbox" title=""><label class="as-switch__toggle" for=""></label><svg class="as-switch__thumb" width="10" height="8" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M3.315 7.858L.133 4.441a.506.506 0 0 1 0-.683l.643-.684a.437.437 0 0 1 .642 0l2.219 2.393L8.58.141a.437.437 0 0 1 .643 0l.643.683a.504.504 0 0 1 0 .683l-5.91 6.35a.437.437 0 0 1-.642 0"></path></svg></div><label class="as-switch__label as-body">Color by category</label></div></as-switch>
+            </section> -->
+            
+            <!-- <section data-help="F" class="as-box">
+                <as-category-widget heading="Place category" default-bar-color="#47DB99" show-clear-button="true" class="hydrated" style="display: block;"><as-widget-header no-data-message="NO DATA AVAILABLE" class="hydrated"><h2 class="as-widget-header__header">Place category</h2><p class="as-widget-header__subheader as-body"></p></as-widget-header><ul class="as-category-widget__list"><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">Food</div> 1.4K</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 100%;"></div></div></li><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">Professional &amp; Other Places</div>   760</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 53.0726%;"></div></div></li><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">Shop &amp; Service</div>   743</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 51.8855%;"></div></div></li><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">Travel &amp; Transport</div>   437</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 30.5168%;"></div></div></li><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">Arts &amp; Entertainment</div>   427</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 29.8184%;"></div></div></li><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">College &amp; University</div>   394</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 27.514%;"></div></div></li><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">Outdoors &amp; Recreation</div>   349</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 24.3715%;"></div></div></li><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">Nightlife Spot</div>   245</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 17.1089%;"></div></div></li><li class="as-category-widget__category"><p class="as-category-widget__info as-body"><div class="as-category-widget__title">Residence</div>   177</p><div class="as-category-widget__bar"><div class="as-category-widget__bar-value" style="background-color: var(--category-bar--color); width: 12.3603%;"></div></div></li></ul><footer class="as-category-widget__footer"><div class="as-category-widget__count as-body">All selected</div><button class="as-btn as-btn--primary as-btn--s as-category-widget__clear" disabled="">Clear selection</button></footer></as-category-widget>
+            </section> -->
+        </div>
+    </aside>
+
+
+
+
+  <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+  <script>
+    var hoveredstreetId = null;
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYnJvb2tlZnp5IiwiYSI6ImNqdWFtZHNmdTA0N3o0M21oZG9peDU2NXMifQ.fbFnwmA72jGPO8IHcfEeRA';
+
+    var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/brookefzy/cka1yguhe01of1jqharhr7bei' // replace this with your style URL
+    });
+
+    
+// helperfunctions//
+function percentNumber(num) {
+    num=num*100
+    return num.toFixed(2)+'%'
+  
+}
+
+function percentNumvisit(num) {
+    num=(Math.log(num+1))/13.4*100
+  return num.toFixed(2)+'%'
+}
+
+function percentNumpre(num) {
+    if (num>13.4){
+        num=100;
+    }else{
+        num =(num)/13.4*100
+    }
+  return num.toFixed(2)+'%'
+}
+function svgbar1(num){
+    width =(Math.log(num+1))/13.4*120
+    return '<svg width="120px" height="10px"><rect x="2" y="1" width="'+width+'" height="10" style="fill:#c22e01;"/></svg>'
+}
+
+function svgbar2(num){
+    if (num>13.4){
+        width=120;
+    }else{
+        width =(num)/13.4*120
+    }
+    
+    return '<svg width="120px" height="10px"><rect x="2" y="1" width="'+width+'" height="10" style="fill:#00939c;"/></svg>'
+}
+
+      map.on('click','Mismatch Index', function(e) {
+        // var cbgs = map.queryRenderedFeatures(e.point,{
+        //   layers:['rdof-group']
+        // });
+        console.log(e.features[0].properties.total_visit_quantile)
+          new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(
+            '<h3>Street Name:</h3><h2><strong>'+e.features[0].properties.st_label+'</strong></h2>'+
+            '<h3>Offline: '+svgbar1(e.features[0].properties.total_visit)+
+                // percentNumvisit(e.features[0].properties.total_visit)+'</h3>'+
+            '<h3>Online: '+svgbar2(e.features[0].properties.logvisit_predict)+///////////need adjustment
+                // percentNumpre(e.features[0].properties.logvisit_predict)+'</h3>'+
+                '<h4><strong>'+
+             percentNumber(e.features[0].properties.mismatch_reshape)+'</strong></h4>'+
+             '<h3>Mismatch Index:</strong></h3>'
+        )
+          .addTo(map);
+          });
+
+          
+          
+          // Change the cursor to a pointer when the mouse is over the states layer.
+          map.on('mouseenter', 'Mismatch Index', function() {
+          map.getCanvas().style.cursor = 'pointer';
+          });
+          
+          // Change it back to a pointer when it leaves.
+          map.on('mouseleave', 'Mismatch Index', function() {
+          map.getCanvas().style.cursor = '';
+          });
+
+
+            map.addControl(
+            new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+            }));
+
+            var layer = document.getElementById('layer');
+            var inputs = layer.getElementsByTagName('option');
+            console.log(layer)
+            console.log(inputs)
+            ///other styles offline visit: mapbox://styles/brookefzy/cka34gg5f024q1ipfokjck4u2
+
+///other styles online visit: mapbox://styles/brookefzy/cka34ksar02bw1iqqwwofy3os 
+            
+            var layerId = layer.value; 
+            console.log(layerId)
+            if(layerId=="offline"){
+                console.log(layerId)
+                map.setStyle('mapbox://styles/brookefzy/cka34gg5f024q1ipfokjck4u2');
+
+            }else if(layerId=="online"){
+    
+                map.setStyle('mapbox://styles/brookefzy/cka34ksar02bw1iqqwwofy3os')
+            }else if (layerId=="mismatch"){
+                map.setStyle('mapbox://styles/brookefzy/cka1yguhe01of1jqharhr7bei');
+            }
+            
+            
+            
+
+
+            // for (var i = 0; i < inputs.length; i++) {
+            // inputs[i].onclick = switchLayer;
+            // console.log(layer.value)
+            
+            // }
+
+
+  </script>
+
+
+
+  </body>
+
+</html>
