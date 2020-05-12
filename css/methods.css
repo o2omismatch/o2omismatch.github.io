@@ -35,7 +35,7 @@ body.as-app-body {
 body {
     background-color: #042762;
     display: block;
-    margin: 8px;
+    margin: 0px;
 }
 
 
@@ -55,6 +55,32 @@ body {
     color: white;
     position: fixed;
     left: 5%;
+    z-index: 1;
+}
+
+nav {
+    position: fixed;
+    height: 4%;
+    width: 100%;
+    margin-right: 1%;
+}
+
+ul {
+    list-style-type: none;
+    height: 100%;
+    width: 20%;
+    padding: 0;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+li {
+    float: left;
+    text-align: center;
+    top: 1%;
+    height: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .navi {
@@ -63,14 +89,18 @@ body {
     font-size: 18px;
     text-decoration: none;
     color: #A9A9A9;
-    position: fixed;
-    top: 3%;
+    /* top: 3%; */
 }
+
+#methods {
+    color: white;
+}
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 100%;
   }
 #map {
     position: fixed;
@@ -94,6 +124,7 @@ img {
     overflow: auto;
     position: absolute;
     top: 80px;
+    /* width: 60%; */
     right: 0;
     bottom: 0;
     left: 0;
@@ -144,7 +175,7 @@ ol {
     display: block;
     weight: 80%;
     list-style-type: decimal;
-    margin-block-start: 10em;
+    margin-block-start: 5em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
@@ -152,10 +183,14 @@ ol {
     line-height: 500%;
 }
 
+iframe {
+    margin-left: -6%;
+}
+
 .section-content {
     margin-top: 0;
     margin-left: 0;
-    width: 80%;
+    width: 40%;
     padding: 30px 30px;
 }
 .section-content {
