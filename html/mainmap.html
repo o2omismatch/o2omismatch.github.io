@@ -62,7 +62,9 @@
                     <div class="dropdown-content">
                     <option value="mismatch">Mismatch Index</option>
                     <option value="offline">Offline Visit</option>
-                    <option value="online">Online Visit</option></div>
+                    <option value="online">Online Visit</option>
+                    <option value="quantilediff">Quantile Differences</option>
+                </div>
                 
                 </select>
             
@@ -184,6 +186,8 @@ function svgbar2(num){
                 map.setStyle('mapbox://styles/brookefzy/cka34ksar02bw1iqqwwofy3os')
             }else if (layerId=="mismatch"){
                 map.setStyle('mapbox://styles/brookefzy/cka1yguhe01of1jqharhr7bei');
+            }else if (layerID =="quantilediff"){
+                map.setStyle('mapbox://styles/brookefzy/cka4g185703h01ilgwf3qjrg4')
             }
             
             }
