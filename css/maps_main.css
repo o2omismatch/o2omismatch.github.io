@@ -10,7 +10,7 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
   }
-  
+
 
 
   * {
@@ -27,16 +27,16 @@ body {
     line-height: 20px;
     padding: 20px 2px;
   }
-  
+
   a {
     color: #404040;
     text-decoration: none;
   }
-  
+
   a:hover {
     color: #101010;
   }
-  
+
   .sidebar {
     position: absolute;
     width: 20%;
@@ -58,13 +58,13 @@ body {
     /* border-right: 1px solid rgba(0, 0, 0, 0.25); */
   }
 
-  
-  
+
+
   .pad2 {
     width: 250px;
     font-family: "Montserrat", sans-serif;
   }
-  
+
   .map {
     /* border-left: 1px solid #fff; */
     position: absolute;
@@ -83,13 +83,13 @@ body {
     padding: 10 10px;
   }
 
-  
+
 
 
 
   h2,
   h3 {
-      
+
     margin-left: 10px;
     margin-right:10px;
     font-size: 1.2em;
@@ -194,8 +194,8 @@ body {
 
 .legend {
     position: absolute;
-    top: 60px;
-    right: 0px;
+    top: 40px;
+    right: -5px;
     /* width: 180px; */
     background-color: #042762;
 }
@@ -208,7 +208,7 @@ body {
     border-radius: 4px;
     background-color: #042762;
 
-    
+
 }
 .legend {
     transition: all .3s cubic-bezier(.4,.01,.165,.99);
@@ -217,7 +217,7 @@ body {
     pointer-events: all;
     font-family: "Montserrat", sans-serif;
     font-variant: small-caps;
-    
+
 }
 
 .labels-legend {
@@ -240,7 +240,7 @@ body {
 
 div {
     display: block;
-} 
+}
 
 
 /*************************** Atlas ***************************/
@@ -251,7 +251,7 @@ div {
     display: none;
 
   }
-  
+
   .mapboxgl-popup-content {
     /* font: 400 12px/22px "Montserrat", sans-serif; */
     padding: 0;
@@ -263,7 +263,7 @@ div {
 
 
   }
-  
+
   .mapboxgl-popup-content-wrapper {
     display: "inline-block";
     padding: 1%;
@@ -271,7 +271,7 @@ div {
     color: #042762;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
-  
+
   .mapboxgl-popup-content h2 {
 
     display: block;
@@ -284,9 +284,9 @@ div {
 
     /* color: #fff; */
   }
-  
+
   .mapboxgl-popup-content h3 {
- 
+
     background:#042762;
     /* color: #042762; */
     margin: 10;
@@ -299,7 +299,7 @@ div {
     margin-top: 1.5;
 
   }
-  
+
   .mapboxgl-popup-content h4 {
     font-size: 27px;
     line-height: 32px;
@@ -316,24 +316,24 @@ div {
   }
 
 
-  
+
   .mapboxgl-popup-content div {
     /* padding: 10px; */
     background:#042762;
     display: "inline-block";
   }
-  
+
   .mapboxgl-container .leaflet-marker-icon {
     cursor: pointer;
     color: #042762;
     background-color: #042762;
   }
-  
+
   .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
     margin-top: 15px;
     background-color: #042762;
   }
-  
+
   .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
     border-bottom-color: #042762;
   }
@@ -413,7 +413,7 @@ section {
 }
 
 #search-container {
-    height: 20%;
+    height: 10%;
 }
 
 .layer {
@@ -425,8 +425,8 @@ section {
 
 #layer {
     display: block;
-    margin-right: 5%;;
-    margin-top: 5%;
+    margin-right: 4px;;
+    margin-top: 0;
     margin-left: auto;
     /* height:100%; */
 }
@@ -475,6 +475,3 @@ select {
     display: block;
     padding: 10px;
   }
-
-
-
