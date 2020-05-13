@@ -42,6 +42,8 @@ p   {
     color: white;
 
     position: relative;
+    bottom: 20%;
+    margin-bottom: 10px;
 }
 
 /* #playBtn {
@@ -61,12 +63,13 @@ p   {
 
 .content {
     position: fixed;
-    /* bottom: 0; */
+    /* bottom: 10%; */
     top: 15%;
     left: 10%;
     /* height: 80%; */
     width: 100%;
     padding: 20px;
+
 }
 
 .supsub {position: absolute; font-size: 32px;}

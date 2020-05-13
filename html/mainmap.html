@@ -134,18 +134,19 @@ function svgbar2(num){
         // var cbgs = map.queryRenderedFeatures(e.point,{
         //   layers:['rdof-group']
         // });
-        console.log(e.features[0].properties.total_visit_quantile)
+        console.log(e.features[0].properties.logvisit_predict)
           new mapboxgl.Popup()
           .setLngLat(e.lngLat)
           .setHTML(
-            '<h3>Street Name:                   '+e.features[0].properties.street_id+'</h3>'+'<h2><strong>'+e.features[0].properties.st_label+'</strong></h2>'+
+              
+            '<h3>Diversity Score: '+percentNumber(e.features[0].properties.store_diversity)+'</h3>'+'<h2><strong>'+e.features[0].properties.st_label+'</strong></h2>'+
             '<h3>Offline: '+svgbar1(e.features[0].properties.total_visit)+
                 // percentNumvisit(e.features[0].properties.total_visit)+'</h3>'+
             '<h3>Online: '+svgbar2(e.features[0].properties.logvisit_predict)+///////////need adjustment
                 // percentNumpre(e.features[0].properties.logvisit_predict)+'</h3>'+
                 '<h4><strong>'+
              percentNumber(e.features[0].properties.mismatch_reshape)+'</strong></h4>'+
-             '<h3>Mismatch Index:</strong><br></h3>'
+             '<h3>Mismatch Index</strong><br></h3>'
         )
           .addTo(map);
           });
