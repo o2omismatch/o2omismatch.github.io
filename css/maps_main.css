@@ -376,6 +376,32 @@ section {
     box-sizing: border-box;
 }
 
+.as-box {
+    display: block;
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#search-container {
+    height: 20%;
+}
+
+.layer {
+    display: block;
+    margin-right: 0;
+    margin-top: 40%;
+    weight:100%;
+}
+
+#layer {
+    display: block;
+    margin-right: 5%;;
+    margin-top: 5%;
+    margin-left: auto;
+    weight:100%;
+}
+
 .as-dropdown {
   /* padding:16px; */
   /* margin-left: 5px; */

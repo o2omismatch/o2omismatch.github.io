@@ -29,7 +29,7 @@
         <h2>Mismatch Distribution</h2><div id='pd'><p>Click a Street</p></div></div> -->
 
 
-    
+
  <!-- geocoding search and side bar -->
 
     <aside class="as-sidebar as-sidebar--right collapse-in-onboarding" data-name="Controls">
@@ -53,27 +53,27 @@
             </div>
             </section>
 
-            <section  class="as-box" >
+            <section  class="as-box layer" >
 
             <!-- <label>Select layer</label> -->
-            
+
                 <select id="layer" onchange = "switchStyle()">
-                
+
                     <div class="dropdown-content">
                     <option value="mismatch">Mismatch Index</option>
                     <option value="offline">Offline Visit</option>
                     <option value="online">Online Visit</option>
                     <option value="quantilediff">Quantile Differences</option>
                 </div>
-                
+
                 </select>
-            
+
 
             </section>
-                </div>  
-            </div> 
+                </div>
+            </div>
 
-            
+
         </div>
     </aside>
 
@@ -168,7 +168,7 @@ function svgbar2(num){
             accessToken: mapboxgl.accessToken,
             mapboxgl: mapboxgl
             }));
-        
+
 
 
 
@@ -189,11 +189,11 @@ function svgbar2(num){
             }else if (layerId =="quantilediff"){
                 map.setStyle('mapbox://styles/brookefzy/cka4g185703h01ilgwf3qjrg4')
             }
-            
+
             }
-            
-            
-            
+
+
+
 
 
             // for (var i = 0; i < inputs.length; i++) {
