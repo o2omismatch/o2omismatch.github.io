@@ -70,5 +70,5 @@ p   {
 }
 
 .supsub {position: absolute; font-size: 32px;}
-.subscript {display:block; position:relative; left:5px; top: 10px; color: #00939c}
-.superscript {display:block; position:relative; left:5px; top: 5px; color: #c22e01}
+.subscript {display:block; position:relative; left:5px; top: 10px; color: #c22e01}
+.superscript {display:block; position:relative; left:5px; top: 5px; color: #00939c}

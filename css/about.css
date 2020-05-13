@@ -84,17 +84,23 @@ li {
     /* margin-top: 10%; */
     /* margin-top: 7%; */
     width: 50%;
+    height: 35%;
     /* height: 45%; */
 }
 
 .img_row {
-    /* height: 35%; */
+    height: 42%;
 }
 
 .text_row {
     /* display: block; */
     /* margin-top: 4%; */
-    /* height: 10%; */
+    height: 10%;
+}
+
+.intro_row {
+    height: 10%;
+    margin-top: 0;
 }
 
 .content_advisor {

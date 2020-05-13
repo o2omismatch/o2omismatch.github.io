@@ -52,28 +52,16 @@
                 </div>
             </div>
             </section>
-
             <section  class="as-box layer" >
-
-            <!-- <label>Select layer</label> -->
-
                 <select id="layer" onchange = "switchStyle()">
-
                     <div class="dropdown-content">
-                    <option value="mismatch">Mismatch Index</option>
-                    <option value="offline">Offline Visit</option>
-                    <option value="online">Online Visit</option>
-                    <option value="quantilediff">Quantile Differences</option>
-                </div>
-
+                        <option value="mismatch">Mismatch Index</option>
+                        <option value="offline">Offline Visit</option>
+                        <option value="online">Online Visit</option>
+                        <option value="quantilediff">Quantile Differences</option>
+                    </div>
                 </select>
-
-
             </section>
-                </div>
-            </div>
-
-
         </div>
     </aside>
 
@@ -170,7 +158,7 @@ function svgbar2(num){
             }));
 
 
-  
+
             function switchStyle(){
                 var selstyle = document.getElementById("layer");
                 var layerId = selstyle.value;
