@@ -24,8 +24,12 @@
                         <a href="methods.html" class="navi" id="methods">Methods</a>
                     </li>
                     <li>
+                        <a href="funfact.html" class="navi" id="funfacts">Fun Facts</a>
+                    </li>
+                    <li>
                         <a href="about.html" class="navi" id="about">About</a>
                     </li>
+                </ul>
                 </ul>
             </nav>
         </div>
@@ -39,13 +43,17 @@
                 <ol>
                     <li>
                         <h2>Observations</h2>
-                        <p>"As one of many yelp users, searching food online is part of my exploratory life." However,
-                            does popular stores among yelp reviewers really contribute to the livelyhood of physical space?
+                        <p>"As one of many yelp users, searching food online is part of my exploratory life." However, <strong>
+                            does popular stores among yelp reviewers really contribute to the livelyhood of physical space?</strong>
                             <br>
-                            Inspired by this question, we download review data from 1,5000+ stores in Manhattan from yelp,
-                            and aggregate these reviews by physical streets. Then we compare the aggregated online popularity
+                            <br>
+                            Inspired by this question, we download review data from 15,000+ stores in Manhattan from Yelp,
+                            and then we aggregate these reviews by physical street segments. In this way we could compare the aggregated online popularity
                             with the number of actual visits along these streets, here is what we found:
-                            <iframe width="850" height="700" frameborder="0" scrolling= "no" src="bubble.html"> </iframe>
+                          
+                            <iframe width="900" height="700" frameborder="0" scrolling= "no" src="bubble.html"> </iframe>
+                            
+                            <iframe width="900" height="700" frameborder="0" scrolling= "no" src="review_visit.html"> </iframe>
                         </p>
 
                     <li><h2>Model Construction</h2>
@@ -55,8 +63,18 @@
                             <p>  * <strong>Business Diversity and Transit: </strong>Is Jane Jacobs still right?</p>
                             <p>  * <strong>Local Business: </strong>How are local businesses doing?</p>
                             <p>  * <strong>X: </strong>We control other variables.</p>
+                            <img class="figure" src="../assets/img/model.png" width="50%">
 
-                            <iframe width="850" height="700" frameborder="0" scrolling= "no" src="coefficients.html"> </iframe>
+                            <iframe width="900" height="800" frameborder="0" scrolling= "no" src="coefficients.html"> </iframe>
+                            <img class="figure" src="../assets/img/legend.png" width="20%">
+                            <!-- <svg width="800" height="50">
+                                
+                                <rect x="290" y="1" width="10" height="30" style="fill:#c22e01;"/>
+                                <rect x="300" y="1" width="50" height="30" style="fill:#F3E3D2;"/>
+                                <rect x="350" y="1" width="50" height="30" style="fill:#bae1e2;"/>
+                                <rect x="400" y="1" width="10" height="30" style="fill:#3CAEA3;"/>
+
+                            </svg> -->
 
 
                         </li>
@@ -70,7 +88,7 @@
                             regressing the total street level visit on online reviews (including the number of reviews and the stars)
                             conditioning on other factors.
                         </p>
-                            <img class="figure" src="../assets/img/pop-up-3.png" width="2000">
+                        <img class="figure" src="../assets/img/pop-up-3.png" width="100%">
 
 
 
@@ -96,7 +114,7 @@
                             following the same manner for street segments.</p>
 
                         <figure>
-                        <img class="figure" src="../assets/img/pop-up-1.png" width="30%" >
+                        <img class="figure" src="../assets/img/pop-up-1.png" width="100%" >
                         </figure>
                         <p>Using Yelp review data, we aggregate the number of reviews,
                             average stars of each individual business at street segment level.</p>

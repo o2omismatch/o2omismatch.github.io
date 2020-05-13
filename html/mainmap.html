@@ -44,7 +44,7 @@
             <div class="legend legend-panel js-legend hide-in-onboarding">
                 <div class="widgets-item legend-inner as-box">
                     <h2 class="as-body as-font--medium legend-text">Mismatch Index</h2>
-                    <div class="mismatch-legend"></div>
+                    <div class="mismatch-legend" ></div>
                     <div class="labels-legend">
                         <span class="as-caption">Offline</span>
                         <span class="as-caption">Online</span>
@@ -117,7 +117,7 @@ function percentNumpre(num) {
 }
 function svgbar1(num){
     width =(Math.log(num+1))/13.4*120
-    return '<svg width="120px" height="10px"><rect x="2" y="1" width="'+width+'" height="10" style="fill:#c22e01;"/></svg>'
+    return '<svg width="150px" height="12px"><rect x="2" y="1.7" width="'+width+'" rx="4.5" height="9.5" style="fill:#c22e01;"/></svg>'
 }
 
 function svgbar2(num){
@@ -127,7 +127,7 @@ function svgbar2(num){
         width =(num)/13.4*120
     }
 
-    return '<svg width="120px" height="10px"><rect x="2" y="1" width="'+width+'" height="10" style="fill:#00939c;"/></svg>'
+    return '<svg width="150px" height="12px"><rect x="2" y="1.7" width="'+width+'" height="9.5" rx="4.5" style="fill:#00939c;"/></svg>'
 }
 
       map.on('click','Mismatch Index', function(e) {
@@ -138,14 +138,14 @@ function svgbar2(num){
           new mapboxgl.Popup()
           .setLngLat(e.lngLat)
           .setHTML(
-            '<h3>Street Name:</h3><h2><strong>'+e.features[0].properties.st_label+'</strong></h2>'+
+            '<h3>Street Name:                   '+e.features[0].properties.street_id+'</h3>'+'<h2><strong>'+e.features[0].properties.st_label+'</strong></h2>'+
             '<h3>Offline: '+svgbar1(e.features[0].properties.total_visit)+
                 // percentNumvisit(e.features[0].properties.total_visit)+'</h3>'+
             '<h3>Online: '+svgbar2(e.features[0].properties.logvisit_predict)+///////////need adjustment
                 // percentNumpre(e.features[0].properties.logvisit_predict)+'</h3>'+
                 '<h4><strong>'+
              percentNumber(e.features[0].properties.mismatch_reshape)+'</strong></h4>'+
-             '<h3>Mismatch Index:</strong></h3>'
+             '<h3>Mismatch Index:</strong><br></h3>'
         )
           .addTo(map);
           });
@@ -170,16 +170,16 @@ function svgbar2(num){
             }));
 
 
-
-
-            // console.log(layerId)
+  
             function switchStyle(){
                 var selstyle = document.getElementById("layer");
                 var layerId = selstyle.value;
 
                 if(layerId=="offline"){
-                console.log(layerId)
+                // console.log(layerId)
                 map.setStyle('mapbox://styles/brookefzy/cka34gg5f024q1ipfokjck4u2');
+
+
 
             }else if(layerId=="online"){
 

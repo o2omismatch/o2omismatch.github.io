@@ -144,22 +144,40 @@ body {
 
 }
 .mismatch-legend {
-    /* width: 100%; */
+
     height: 6px;
     background: linear-gradient(90deg,#c22e01 0,#c22e01 20%,#dd7755 20%,#dd7755 40%,#f8c0aa 40%,#f8c0aa 60%,
     #bae1e2 60%,#bae1e2 80%,#00939c 80%,#00939c 100%);
 }
+
+.offline-legend {
+
+  height: 6px;
+  background: linear-gradient(90deg,#f8c0aa,#dd7755,#c22e01);
+}
+
+.online-legend {
+
+  height: 6px;
+  background: linear-gradient(90deg,#d4f6f7,#bae1e2,#00939c);
+}
+
+.quantile-legend {
+  /* width: 100%; */
+  height: 6px;
+  background: linear-gradient(90deg,#c22e01 0,#c22e01 20%,#dd7755 20%,#dd7755 40%,#f8c0aa 40%,#f8c0aa 60%,
+  #bae1e2 60%,#bae1e2 80%,#00939c 80%,#00939c 100%);
+}
+
 .widgets-item {
     position: relative;
-    /* border-bottom: 1px solid rgba(255,255,255,.1); */
-    /* padding: 24px; */
     right:20px;
     list-style-type: none;
     color: #fff;
     width: 235px;
     background: #042762;
     border-radius: 5px;
-    /* margin-top:10px; */
+
 }
 
 .as-font--medium {
@@ -238,12 +256,16 @@ div {
     /* font: 400 12px/22px "Montserrat", sans-serif; */
     padding: 0;
     width: 240px;
-    height: 190px;
+    /* height: 190px; */
     background: #042762;
+    display: "inline-block";
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 
   }
   
   .mapboxgl-popup-content-wrapper {
+    display: "inline-block";
     padding: 1%;
     background:#042762;
     color: #042762;
@@ -269,7 +291,7 @@ div {
     margin: 10;
     display: block;
     padding: 0px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
     font-weight: 100;
     margin-bottom: 0;
     padding-bottom: -5px;
@@ -296,10 +318,12 @@ div {
   .mapboxgl-popup-content div {
     /* padding: 10px; */
     background:#042762;
+    display: "inline-block";
   }
   
   .mapboxgl-container .leaflet-marker-icon {
     cursor: pointer;
+    background-color: #042762;
   }
   
   .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
@@ -318,8 +342,8 @@ div {
     bottom: 0;
     width: 5px;
     left: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 .popup-figure h2 {
     font: 24px "Montserrat", sans-serif;
@@ -339,10 +363,12 @@ div {
   .popup-name h2 {
     font: 24px "Montserrat", sans-serif;
     color: #fff;
+
 }
 
 * {
     box-sizing: border-box;
+    display: "inline-block";
 }
 
 .bar {
