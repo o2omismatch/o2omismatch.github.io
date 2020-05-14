@@ -89,7 +89,7 @@ li {
 }
 
 .img_row {
-    height: 53%;
+    /* height: 53%; */
     overflow: hidden;
 }
 
@@ -103,7 +103,7 @@ li {
 .intro_row {
     overflow: hidden;
     height: 10%;
-    margin-top: 1%;
+    /* margin-top: 1%; */
 
 
     /* display: inline; */
@@ -169,7 +169,7 @@ h2 {
 
 p {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1em;
     color: white;
     position: relative;
     top: 50%;
