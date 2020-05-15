@@ -25,13 +25,15 @@ p   {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.8;
+    text-indent: 2em;
+    text-align: justify;
 
     position: relative;
     color: white;
 
     top: 0px;
     /* height: 70px; */
-    width: 650px;
+    width: 700px;
 }
 
 #map_text {
