@@ -146,8 +146,9 @@ body {
 .mismatch-legend {
 
     height: 6px;
-    background: linear-gradient(90deg,#c22e01 0,#c22e01 20%,#dd7755 20%,#dd7755 40%,#f8c0aa 40%,#f8c0aa 60%,
-    #bae1e2 60%,#bae1e2 80%,#00939c 80%,#00939c 100%);
+    background: linear-gradient(90deg,#c22e01 0,#c22e01 16.7%,#dd7755 16.7%,#dd7755 33.5%,#f8c0aa 33.5%,#f8c0aa 50%,
+    #e0eaeb 50%, #e0eaeb 66.7%,
+    #bae1e2 66.7%,#bae1e2 83.5%,#00939c 83.5%,#00939c 100%);
 }
 
 .offline-legend {
@@ -165,8 +166,9 @@ body {
 .quantile-legend {
   /* width: 100%; */
   height: 6px;
-  background: linear-gradient(90deg,#c22e01 0,#c22e01 20%,#dd7755 20%,#dd7755 40%,#f8c0aa 40%,#f8c0aa 60%,
-  #bae1e2 60%,#bae1e2 80%,#00939c 80%,#00939c 100%);
+  background: linear-gradient(90deg,#c22e01 0,#c22e01 16.7%,#dd7755 16.7%,#dd7755 33.5%,#f8c0aa 33.5%,#f8c0aa 50%,
+  #e0eaeb 50%, #e0eaeb 66.7%,
+  #bae1e2 66.7%,#bae1e2 83.5%,#00939c 83.5%,#00939c 100%);
 }
 
 .widgets-item {

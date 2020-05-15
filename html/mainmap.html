@@ -102,8 +102,6 @@
           .addTo(map);
           });
 
-
-
           // Change the cursor to a pointer when the mouse is over the states layer.
           map.on('mouseenter', 'Mismatch Index', function() {
           map.getCanvas().style.cursor = 'pointer';
@@ -114,12 +112,13 @@
           map.getCanvas().style.cursor = '';
           });
 
-
+//geocoder
             map.addControl(
             new MapboxGeocoder({
             accessToken: mapboxgl.accessToken,
             mapboxgl: mapboxgl
             }));
+//geocoder
 
 
 
@@ -167,12 +166,6 @@
 
 
 
-
-            // for (var i = 0; i < inputs.length; i++) {
-            // inputs[i].onclick = switchLayer;
-            // console.log(layer.value)
-
-            // }
 
 
   </script>
