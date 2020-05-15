@@ -6,6 +6,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <script src="../javascript/maphelpers.js"></script>
     
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../css/maps_main.css">
@@ -25,9 +26,6 @@
   <body>
 
     <div id='map' class='map pad2'></div>
-    <!-- <div  class='sidebar pad2'><h2>Mismatch Distribution</h2><div id='pd'><p>Click a Street</p></div></div> -->
-    <!-- <div  class='sidebar pad2'>
-        <h2>Mismatch Distribution</h2><div id='pd'><p>Click a Street</p></div></div> -->
 
 
 
@@ -44,12 +42,11 @@
                 <!-- legend -->
             <div class="legend legend-panel js-legend hide-in-onboarding">
                 <div class="widgets-item legend-inner as-box">
-                    <h2 class="as-body as-font--medium legend-text">Mismatch Index</h2>
-                    <div class="mismatch-legend" ></div>
+                    <h2 class="as-body as-font--medium legend-text" id="legendtitle">Mismatch Index</h2>
+                    <div class="mismatch-legend" id="mismatch-color"></div>
                     <div class="labels-legend">
-                        <span class="as-caption">Offline</span>
-                        <span class="as-caption">Online</span>
-                    <!-- </div> -->
+                        <span class="as-caption" id="legend-left">Offline</span>
+                        <span class="as-caption" id="legend-right">Online</span>
                 </div>
             </div>
             </section>
@@ -83,41 +80,6 @@
       style: 'mapbox://styles/brookefzy/cka1yguhe01of1jqharhr7bei' // replace this with your style URL
     });
 
-
-// helperfunctions//
-function percentNumber(num) {
-    num=num*100
-    return num.toFixed(2)+'%'
-
-}
-
-function percentNumvisit(num) {
-    num=(Math.log(num+1))/13.4*100
-  return num.toFixed(2)+'%'
-}
-
-function percentNumpre(num) {
-    if (num>13.4){
-        num=100;
-    }else{
-        num =(num)/13.4*100
-    }
-  return num.toFixed(2)+'%'
-}
-function svgbar1(num){
-    width =(Math.log(num+1))/13.4*120
-    return '<svg width="150px" height="12px"><rect x="2" y="1.7" width="'+width+'" rx="4.5" height="9.5" style="fill:#c22e01;"/></svg>'
-}
-
-function svgbar2(num){
-    if (num>13.4){
-        width=120;
-    }else{
-        width =(num)/13.4*120
-    }
-
-    return '<svg width="150px" height="12px"><rect x="2" y="1.7" width="'+width+'" height="9.5" rx="4.5" style="fill:#00939c;"/></svg>'
-}
 
       map.on('click','Mismatch Index', function(e) {
         // var cbgs = map.queryRenderedFeatures(e.point,{
@@ -164,19 +126,39 @@ function svgbar2(num){
             function switchStyle(){
                 var selstyle = document.getElementById("layer");
                 var layerId = selstyle.value;
+                var legendname=document.getElementById("legendtitle")
+                var legendleft=document.getElementById("legend-left")
+                var legendright=document.getElementById("legend-right")
+                var legendcolor=document.getElementById("mismatch-color")
 
                 if(layerId=="offline"){
                 // console.log(layerId)
                 map.setStyle('mapbox://styles/brookefzy/cka34gg5f024q1ipfokjck4u2');
-
-
+                legendname.innerHTML ="Offline Visit"
+                legendleft.innerHTML = "Low"
+                legendright.innerHTML = "High"
+                legendcolor.className ="offline-legend"
 
             }else if(layerId=="online"){
+                legendname.innerHTML ="Online Visit"
+                legendleft.innerHTML = "Low"
+                legendright.innerHTML = "High"
+                legendcolor.className ="online-legend"
+                
 
                 map.setStyle('mapbox://styles/brookefzy/cka34ksar02bw1iqqwwofy3os')
+
             }else if (layerId=="mismatch"){
+                legendname.innerHTML ="Mismatch Index"
+                legendleft.innerHTML = "Offline"
+                legendright.innerHTML = "Online"
+                legendcolor.className="mismatch-legend"
                 map.setStyle('mapbox://styles/brookefzy/cka1yguhe01of1jqharhr7bei');
             }else if (layerId =="quantilediff"){
+                legendname.innerHTML ="Quantile Difference"
+                legendleft.innerHTML = "Offline"
+                legendright.innerHTML = "Online"
+                legendcolor.className ="quantile-legend"
                 map.setStyle('mapbox://styles/brookefzy/cka4g185703h01ilgwf3qjrg4')
             }
 
