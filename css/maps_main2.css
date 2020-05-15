@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+body {
+      background: #042762;
+      color: #f8f8f8;
+      font: 500 20px/26px "Montserrat", sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    width: 100%
+    }
+
+.as-sidebar-right {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    flex: 0 1 auto;
+    flex-direction: column;
+    opacity: 0.8;
+    right:0;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #042762;
+
+}
+section {
+    display: block;
+}
+.as-box {
+    padding: 16px;
+}
+
+/* section container 1 geocoder */
+.search-container {
+    font-size: 18px;
+    line-height: 50px;
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    background-color: #042762;
+    width: 100%;
+    min-width: 240px;
+    border-radius: 4px;
+    transition: width .25s, min-width .25s;
+  }
+
+  /* .mapboxgl-ctrl-geocoder {
+
+    background-color: #042762;
+
+  } */
+  
+

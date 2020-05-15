@@ -59,22 +59,22 @@
                     <li><h2>Model Construction</h2>
                         <p> To test how much does online reviews actually contribute to physical acitivites, we include other
                             variables in the model.</p>
-                            <p>  * <strong>Physical Characteristics: </strong>Does Beautiful Space Matters?</p>
-                            <p>  * <strong>Business Diversity and Transit: </strong>Is Jane Jacobs still right?</p>
-                            <p>  * <strong>Local Business: </strong>How are local businesses doing?</p>
-                            <p>  * <strong>X: </strong>We control other variables.</p>
+                            <p>  * <strong>Physical Characteristics: </strong> <em>Does Beautiful Space Matter?</em></p>
+                            <p>  * <strong>Business Diversity and Transit: </strong><em>Jane Jacobs still right?</em> </p>
+                            <p>  * <strong>Local Business: </strong> <em>How are local businesses doing?</em></p>
+                            <p>  * <strong>X: </strong> <em>We control other variables.</em></p><br>
                             <img class="figure" src="../assets/img/model.png" width="50%">
+                            <p>The graph below shows our preliminary results. The height of the bar indicates the significance of
+                                each variable (how precise they are), and the length of the bar shows the effectiveness of each variable
+                                (how much they contribute to the model). For example, the average star in each street increase 1 unit is
+                                associated with around 35% increase in the offline visitor volume. But once the average star goes beyond 3.4, it
+                                starts to associate with the decrease of offline visitor volume (refer to the quadratic term).
+                            </p>
+
 
                             <iframe width="900" height="800" frameborder="0" scrolling= "no" src="coefficients.html"> </iframe>
-                            <img class="figure" src="../assets/img/legend.png" width="20%">
-                            <!-- <svg width="800" height="50">
-                                
-                                <rect x="290" y="1" width="10" height="30" style="fill:#c22e01;"/>
-                                <rect x="300" y="1" width="50" height="30" style="fill:#F3E3D2;"/>
-                                <rect x="350" y="1" width="50" height="30" style="fill:#bae1e2;"/>
-                                <rect x="400" y="1" width="10" height="30" style="fill:#3CAEA3;"/>
+                            <img class="center" src="../assets/img/legend.png" width="20%">
 
-                            </svg> -->
 
 
                         </li>
@@ -86,7 +86,7 @@
                             of variance could not be explained even after we control the neighborhood variables! Therefore,
                             use this model's residual, we define a O2O mismatch index, which is the residual from the OLS model
                             regressing the total street level visit on online reviews (including the number of reviews and the stars)
-                            conditioning on other factors.
+                            and other built environment factors.
                         </p>
                         <img class="figure" src="../assets/img/pop-up-3.png" width="100%">
 
@@ -97,21 +97,23 @@
                     </li>
                     <li>
                         <h2>Data</h2>
-                        <p>We collect the SafeGraph pattern data* via the SafeGraph COVID-19 Data Consortium
-                            and then extract the data from October to December 2019 for our analysis.
+                        <p>We use the SafeGraph pattern data* via the SafeGraph COVID-19 Data Consortium to estimate the offline popularity.
+                            We aggregate the POI level visit pattern data from October to December in 2019 for each poi
+                            for our analysis.
+             
+                            Our review data are downloaded from Yelp. We use the number of reviews, review stars and claimed closed stores 
+                            for all listings in Manhattan district to estimate the online popularity.
 
-                            Our review data are downloaded from Yelp. We use most recent listings in Manhattan
-                            areas to estimate the online popularity.
+                            To make the two data comparable, we only select businesses that are coded in retail, restaurants, hotels and arts & recreaction
+                            according to the official <a href="https://www.naics.com/search/">NAICS code</a> (44,45,71,72). 
 
                         </p>
                     </li>
                     <li>
                         <h2>Estimating Street-level Online Popularity and offline Popularity</h2>
 
-                        <p>All the POI visit data in Manhattan is aggregated towards the nearest street
-                            segments using an R-tree algorithm to calculate the total visits of street segments
-                            in this 3-month time period. Similarly, the total visits by sectors are calculated
-                            following the same manner for street segments.</p>
+                        <p>All the POI visit (both online and offline) data are aggregated towards the nearest street
+                            segments using an R-tree search algorithm. </p>
 
                         <figure>
                         <img class="figure" src="../assets/img/pop-up-1.png" width="100%" >
@@ -123,7 +125,7 @@
                     <li>
                         <h2>Physical Environment Beauty Index</h2>
                         <p>We use Google Street View images downloaded from 2017 dataset to extract built environment values.
-                            This work used a deep learning model created by <a href="https://doi.org/10.1016/j.landurbplan.2018.08.020">Fan (2018)</a>
+                            This work used a deep learning model created by <a href="https://doi.org/10.1016/j.landurbplan.2018.08.020">Fan (2018)</a>.
                             With the model and 6,708 street view images in Manhattan, we predict the beauty index of each images, and then aggregate
                             the beauty score by each street segment. The beauty score was normalized.
                         </p>
