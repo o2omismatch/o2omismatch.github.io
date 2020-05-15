@@ -7,7 +7,7 @@
 
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
     <script src="../javascript/maphelpers.js"></script>
-    
+
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../css/maps_main.css">
     <!-- geocoding style -->
@@ -40,22 +40,25 @@
             </section>
             <section class="as-box" id="legend">
                 <!-- legend -->
-            <div class="legend legend-panel js-legend hide-in-onboarding">
-                <div class="widgets-item legend-inner as-box">
-                    <h2 class="as-body as-font--medium legend-text" id="legendtitle">Mismatch Index</h2>
-                    <div class="mismatch-legend" id="mismatch-color"></div>
-                    
-                    <div class="labels-legend">
-                        <span class="as-caption" id="legend-left">Offline</span>
-                        <span class="as-caption" id="legend-right">Online</span>
+                <div class="legend legend-panel js-legend hide-in-onboarding">
+                    <div class="widgets-item legend-inner as-box">
+                        <h2 class="as-body as-font--medium legend-text" id="legendtitle">Mismatch Index</h2>
+                        <div class="mismatch-legend" id="mismatch-color"></div>
 
-                    <svg height="10" width="250" class ="legend-triangle">
-                        <polygon y=10 points="0,10,100,10,100,0,0,5" style="fill:white;stroke:no" />
-                        </svg>
-                    <div class="labels-legend">
-                        <span class="as-caption" >Offline Visit Volume</span>
+                        <div class="labels-legend">
+                            <span class="as-caption" id="legend-left">Offline</span>
+                            <span class="as-caption" id="legend-right">Online</span>
+                            <div class="legend-triangle">
+                                <svg height="10" width="100" class ="legend-triangle-poly">
+                                    <polygon points="0,10,100,10,100,0,0,7" style="fill:white;stroke:no" />
+                                </svg>
+                                <span class="as-caption-2" >Offline Visit Volume</span>
+                            </div>
+
+                        <!-- <div class="labels-legend"> -->
+                        </div>
+                    </div>
                 </div>
-            </div>
             </section>
             <section  class="as-box layer" >
                 <select id="layer" onchange = "switchStyle()">
@@ -96,7 +99,7 @@
           new mapboxgl.Popup()
           .setLngLat(e.lngLat)
           .setHTML(
-              
+
             '<h3>Diversity Score: '+percentNumber(e.features[0].properties.store_diversity)+'</h3>'+'<h2><strong>'+e.features[0].properties.st_label+'</strong></h2>'+
             '<h3>Offline: '+svgbar1(e.features[0].properties.total_visit)+
                 // percentNumvisit(e.features[0].properties.total_visit)+'</h3>'+
@@ -150,7 +153,7 @@
                 legendleft.innerHTML = "Low"
                 legendright.innerHTML = "High"
                 legendcolor.className ="online-legend"
-                
+
 
                 map.setStyle('mapbox://styles/brookefzy/cka34ksar02bw1iqqwwofy3os')
 

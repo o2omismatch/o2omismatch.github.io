@@ -220,10 +220,11 @@ body {
 }
 
 .labels-legend {
-    display: flex;
+    display: block;
     font-size: 10px;
     justify-content: space-between;
     width: 100%;
+    overflow: hidden;
 }
 
 .legend-inner {
@@ -468,7 +469,11 @@ select {
 
 }
 
-
+#legend-right {
+    text-align: right;
+    margin-left: 130px;
+    /* margin-right: 0; */
+}
 
   section {
     display: block;
@@ -476,8 +481,11 @@ select {
   }
 
 .legend-triangle{
-  display: block;
-  padding-top: 7px;
-
+  display: inline-block;
+  /* padding-top: 7px; */
+  margin-left: auto;
+  margin-top: auto;
+  width: 100%;
+  font-size: 9px;
 
 }
