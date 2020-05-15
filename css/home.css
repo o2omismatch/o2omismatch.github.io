@@ -77,6 +77,26 @@ p   {
 
 }
 
+.popup_btn {
+    display: inline-block;
+    /* position:absolute; */
+    background-color: #c22e01;
+    /* width: %; */
+    border: none;
+    color: white;
+    font-size: 1em;
+    /* margin-top: 2%; */
+    /* margin-bottom: 20px; */
+    border-radius: 3px;
+    padding: 6px;
+    padding-left:18px;
+    padding-right:18px;
+    padding-bottom: 8px;
+    /* margin:3px; */
+    
+
+}
+
 .supsub {position: absolute; font-size: 32px;}
 .subscript {display:block; position:relative; left:5px; top: 10px; color: #c22e01}
 .superscript {display:block; position:relative; left:5px; top: 5px; color: #00939c}
