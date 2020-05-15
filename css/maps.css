@@ -78,7 +78,7 @@ li {
     right:25%;
     /* width: 50%;  */
     /* Full width */
-    height: 60%; 
+    height: 60%;
     /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: #042762; /* Fallback color */
@@ -96,13 +96,13 @@ li {
   padding: 10px;
   top: 0%;
   bottom: 0%;
-  width: 90%; 
+  width: 90%;
   /* Could be more or less, depending on screen size */
   height: 80%;
   line-height: 150%;
   border-radius: 12px;
   box-shadow: 0 0 24px #042762;
-  
+
 
 }
 

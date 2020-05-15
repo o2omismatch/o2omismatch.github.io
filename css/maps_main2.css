@@ -53,6 +53,14 @@ section {
     border-radius: 4px;
     transition: width .25s, min-width .25s;
   }
+.legend {
+    position: absolute;
+    z-index: 2;
+    top: 40px;
+
+    /* width: 180px; */
+    background-color: #042762;
+}
 
   /* .mapboxgl-ctrl-geocoder {
 
