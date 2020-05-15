@@ -65,13 +65,15 @@ p   {
 }
 
 .content {
-    position: fixed;
+    position: absolute;
     /* bottom: 10%; */
-    top: 15%;
+    top: 10%;
     left: 10%;
     /* height: 80%; */
     width: 100%;
     padding: 20px;
+    overflow-y: auto;
+
 
 }
 
