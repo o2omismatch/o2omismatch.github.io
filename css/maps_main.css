@@ -50,8 +50,8 @@ body {
 
   .as-sidebar {
     position: absolute;
-    width: 20%;
-    height: 100%;
+    width: 280px;
+    height: 40%;
     top: 0;
     right: 0;
     overflow: hidden;

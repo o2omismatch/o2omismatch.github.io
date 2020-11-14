@@ -20,7 +20,7 @@ body {
     }
 
 .as-sidebar-right {
-    /* display: none; */
+     display: none; 
     position: absolute;
     top: 0;
     flex: 0 1 auto;
